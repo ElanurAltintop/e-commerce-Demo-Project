@@ -1,0 +1,35 @@
+<!-- <h3 *ngIf="products; else noProduct">{{ title }}</h3> -->
+<!-- ürünler varsa göster yoksa gösterme -->
+<app-category></app-category>
+<div class="mb-3">
+  <input
+    class="form-control"
+    id="productName"
+    placeholder="Arama Kutusu"
+    [(ngModel)]="filterText"   
+  />
+  <!-- two way binding iki taraflıdır. ngmodel örnektir [()] ama süslü parantezler tek taraflıdır {{}} -->
+  <!-- component.ts içinde filtertext de tanımlandı varsayılan olarak a gitti mesela öyle gelir değiştirdiğimizde dğeişir-->
+
+  <div *ngIf="filterText" class="form-text">
+   Şu an <strong>{{filterText}}</strong> aradınız
+  </div>
+</div> 
+
+<div class="row">
+  <ng-template #noProduct>
+    <div class="alert alert-primary" role="alert">
+      Bu kategoride ürün yoktur.
+    </div>
+  </ng-template>
+  <div  *ngFor="let product of products | productFilter:filterText" class="productbox" style="width: 18rem">
+    <img [src]="product.imageURL" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">
+        {{ product.description }} {{ product.price | currency }}
+      </p>
+      <a (click)="addToCart(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+</div>

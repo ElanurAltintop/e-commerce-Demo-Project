@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 10000,
+      "categoryId": 1,
+      "description": "HP Pavilion",
+      "imageURL": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 200,
+      "categoryId": 2,
+      "description": "ATech",
+      "imageURL": "https://www.a4tech.com/alanUpload/product/listImg/202004/1109461835763705.jpg"
+    },
+    {
+      "name": "Telefon",
+      "description": "İphone SE 2020",
+      "imageURL": "https://cdn.cimri.io/image/1000x1000/appleiphonesegbinmpakllceptelefonu_232395072.jpg",
+      "price": "17000",
+      "categoryId": "1",
+      "id": 3
+    },
+    {
+      "name": "Buzdolabı",
+      "description": "Arçelik - Siyah Ters Kapaklı",
+      "imageURL": "https://www.gizerler.com/assets/product-images/127000/arcelik-391625-esc-572-lt-f-enerji-gardirop-no-frost-siyah-cam-buzdolabi_46429.jpg",
+      "price": "18.000",
+      "categoryId": "2",
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bilgisayar"
+    },
+    {
+      "id": 2,
+      "name": "Elektronik"
+    }
+  ]
+}
